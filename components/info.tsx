@@ -1,6 +1,8 @@
 import { Product } from '@/types';
 import React from 'react';
 import Currency from '@/components/ui/currency';
+import Button from '@/components/ui/button';
+import { ShoppingCart } from 'lucide-react';
 
 interface InfoProps {
   data: Product;
@@ -26,6 +28,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           className='h-6 w-6 rounded-full border border-gray-600'
           style={{ backgroundColor: data.color.value }}
         ></div>
+      </div>
+      <div className='mt-10 flex items-center gap-x-3'>
+        <Button className='flex items-center gap-x-2'>
+          Add to Cart <ShoppingCart />
+        </Button>
       </div>
     </div>
   );
