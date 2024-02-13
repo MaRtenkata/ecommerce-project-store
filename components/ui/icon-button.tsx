@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 interface IconButtonProps {
-  handleClick?: () => void;
+  handleClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   icon: React.ReactElement;
   className?: string;
 }
